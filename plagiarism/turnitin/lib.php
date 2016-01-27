@@ -220,7 +220,7 @@ class plagiarism_plugin_turnitin extends plagiarism_plugin {
         $resetforum = (isset($eventdata['other']['reset_options']['reset_forum_all'])) ? 
                             $eventdata['other']['reset_options']['reset_forum_all'] : 0;
 
-        $supportedmods = array('assign', 'forum', 'workshop');
+        $supportedmods = array('assign', 'forum', 'workshop', 'coursework');
         foreach ($supportedmods as $supportedmod) {
             $module = $DB->get_record('modules', array('name' => $supportedmod));
 
